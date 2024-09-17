@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS DEMO</title>
+</head>
+<body>
+    <p id="para"></p>
+    <form>
+        <input id="num1" type="number">
+        <br>
+        <button type="button" onclick="demofunction()">click me</button>
+    </form>
+<script>
+    placetoput=document.getElementById("para");
+    placetoput.innerHTML="HELOOOO";
+    function demofunction(){
+        var x =document.getElementById("num1").value;
+        y=x*x
+        alert(y);
+        placetoput.innerHTMl=y;
+    }
+</script>
+</body>
+</html>
