@@ -8,16 +8,19 @@
     <form>
         <input id="num1" type="number">
         <br>
-        <button type="submit" onclick="demofunction()">click me</button>
+        <input id="num2" type="number">
+        <br>
+        <button type="button" onclick="additionfunction()">calculate</button>
     </form>
 <script>
     placetoput=document.getElementById("para");
-    placetoput.innerHTML="HELOOOO";
-    function demofunction(){
-        var x =document.getElementById("num1").value;
-        y=x*x
-        alert(y);
-        placetoput.innerHTMl=y;
+    placetoput.innerHTML="add to numbers result: ";
+    function additionfunction(){
+        let x =document.getElementById("num1").value;
+        let y =document.getElementById("num2").value;
+        z = x + y
+        alert(z);
+        placetoput.innerHTMl=z;
     }
 </script>
 </body>
