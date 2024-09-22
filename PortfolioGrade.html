@@ -32,26 +32,28 @@
         let grade = ""
         //not including below four as im catching in default.
         switch (true) {
-            case (total > 4 && total < 13):
+            case (total >= 4 && total < 13):
                 grade = "G"
                 break;
-            case (total > 4 && total < 13):
-                grade = "G"
+            case (total >= 13 && total < 22):
+                grade = "F"
                 break;
-            case (total > 4 && total < 13):
-                grade = "G"
+            case (total >= 22 && total < 31):
+                grade = "E"
                 break;
-            case (total > 4 && total < 13):
-                grade = "G"
+            case (total >= 31 && total < 41):
+                grade = "D"
                 break;
-            case (total > 4 && total < 13):
-                grade = "G"
+            case (total >= 41 && total < 54):
+                grade = "C"
                 break;
-            case (total > 4 && total < 13):
-                grade = "G"
+            case (total >= 54 && total < 67):
+                grade = "B"
                 break;
-            case (total > 4 && total < 13):
-                grade = "G"
+            case (total >= 67 && total < 80):
+                grade = "A"
+            case (total >= 80):
+                grade = "A*"
                 break;
             default:
                 grade = "U"
