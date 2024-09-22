@@ -21,19 +21,48 @@
         <p> </p>
         <button type="button" onclick="gradecalculate()">calculate</button>
     </form>
+	<p id="answer"> </p>
 <script>
-   var placetoput=document.getElementById("para");
-    placetoput.innerHTML="add to numbers result: ";
-    console.log(placetoput)
     function gradecalculate(){
         let x =Number(document.getElementById("evaluation").value);
         let y =Number(document.getElementById("Implimentation").value);
         let z =Number(document.getElementById("design").value);
         let w  =Number(document.getElementById("analysis").value);
-        let total = x + y + z + w;
-        console.log(total);
-        placetoput.innerHTMl=z;
+        let total = x + y + z + w
+        let grade = ""
+        //not including below four as im catching in default.
+        switch (true) {
+            case (total > 4 && total < 13):
+                grade = "G"
+                break;
+            case (total > 4 && total < 13):
+                grade = "G"
+                break;
+            case (total > 4 && total < 13):
+                grade = "G"
+                break;
+            case (total > 4 && total < 13):
+                grade = "G"
+                break;
+            case (total > 4 && total < 13):
+                grade = "G"
+                break;
+            case (total > 4 && total < 13):
+                grade = "G"
+                break;
+            case (total > 4 && total < 13):
+                grade = "G"
+                break;
+            default:
+                grade = "U"
+                break;
+        };
+        console.log(grade,total);
+        var placetoput = document.getElementById("answer");
+    	placetoput.innerHTML="You scored this total " + total + " your grade is " + grade;
+		
     }
+
 </script>
 </body>
 </html>

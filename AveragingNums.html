@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS SIMPLE ADDING</title>
+</head>
+<body>
+    <form>
+        <input id="numofnums" type="number">
+        <br>
+        <button type="button" onclick="howmanyinput()">how many numbers</button>
+    </form>
+    <form id="numbers">
+
+    </form>
+<script>
+    let container = document.getElementById("numbers");
+    function howmanyinput() {
+        let num = Number(document.getElementById("numofnums").value);
+        for (let i = 0; i < num; i++) {
+            let node = document.createElement("input");
+            node.setAttribute("id","derek"+ i);
+            container.appendChild(node);
+            let linebreak = document.createElement("br");
+            container.appendChild(linebreak);
+        }
+        let calcbutton = document.createElement("button");
+        calcbutton.setAttribute("onclick", "totalandaverage()");
+        calcbutton.setAttribute("type", "button");
+        calcbutton.setAttribute("id", "calculateButton");
+        container.appendChild(calcbutton);
+        document.getElementById("calculateButton").innerHTML = "calculate";
+    }
+    function totalandaverage() {
+        let total = 0
+        let num = Number(document.getElementById("numofnums").value);
+        for (let i = 0; i < num; i++) {
+            let inputednum = Number(document.getElementById("derek" + i).value);
+            total += inputednum;  
+        }
+        let average = total/num
+        console.log("average = ",average," total= ", total);
+        let result = document.createElement("p");
+        result.setAttribute("id", "result")
+        container.appendChild(result);
+        document.getElementById("result").innerHTML = "your total = " + total+ " your average = " + average
+    }
+</script>
+</body>
+</html>
