@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS COMPOUND INTEREST</title>
+</head>
+<body>
+    <form>
+        <input id="currentbalance" type="number">
+        <br>
+        <input id="desiredbalance" type="number">
+        <br>
+        <button type="button" onclick="yearstobalance()">Show future projections</button>
+    </form>
+    <form id="years">
+
+    </form>
+<script>
+    let container = document.getElementById("years");
+    function yearstobalance() {
+        let x = Number(document.getElementById("desiredbalance").value);
+        let y = Number(document.getElementById("currentbalance").value);
+        let count = 0;
+        let years = document.createElement("p");
+        years.setAttribute("id", "eachyear");
+        while (x > y) {
+            count += 1;
+            y += (y * 0.04);
+            container.appendChild(years);
+            document.getElementById("eachyear").innerHTML = "Year " +count+ ": New balance = " +y;
+            let linebreak = document.createElement("br");
+            container.appendChild(linebreak);
+            console.log(years);
+        }
+        }
+</script>
+</body>
+</html>
