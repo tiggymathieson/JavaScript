@@ -12,11 +12,8 @@
     function randomnum(){
         let array = ["one", "two", "three", "four", "five", "six"];
         let x = Math.floor((Math.random() * 6) + 1);
-        console.log(x);
         let indx = x - 1
-        console.log(indx);
         let str = array[indx]
-        console.log(str);
         let placetoput=document.getElementById("para");
         placetoput.innerHTML="You rolled " +str
     }
